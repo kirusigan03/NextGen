@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-primary: #ed3849;
+  --color-primary-dark: #d23141;
+  --color-primary-light: #f4e5ec;
+
+  --color-text-dark: #0f172a;
+  --color-text-light: #64748b;
+  --color-extra-light: #f8fafc;
+
+  /* Max Width */
+  --max-width-screen-2xl: 1400px;
+  --max-width-custom-1200: 1200px;
+  --max-width-custom-900: 900px;
+}

@@ -16,12 +16,18 @@ app.use(bodyParser.urlencoded({extended: true}))
 app.use(cors({
   origin: 'http://localhost:5173',
   credentials: true
-}))
+}));
 
 //all routes
 const authRoutes = require('./src/users/user.route');
+const productRoutes = require('./src/products/products.route');
+const reviewRoutes = require('./src/reviews/reviews.router');
+const orderRoutes = require('./src/orders/orders.route');
 
-app.use('/api/auth', authRoutes)
+app.use('/api/auth', authRoutes);
+app.use('/api/products', productRoutes);
+app.use('/api/reviews', reviewRoutes);
+app.use('/api/orders', orderRoutes); 
 
 main()
 .then(() => console.log("mongodb is successfully connected."))

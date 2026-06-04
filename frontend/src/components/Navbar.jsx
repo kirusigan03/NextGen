@@ -34,7 +34,7 @@ const Navbar = () => {
         {lable: "Dashboard", path: "/dashboard/admin"},
         {lable: "Manage Items", path: "/dashboard/manage-products"},
         {lable: "All Orders", path: "/dashboard/manage-orders"},
-        {lable: "Add New Post", path: "/dashboard/add-new-post"},
+        {lable: "Add New Post", path: "/dashboard/add-product"},
     ]
 
     // user dropdown menus
@@ -83,7 +83,7 @@ const Navbar = () => {
                    <span>
                     <button onClick={handleCartToggle} className='hover:text-primary'>
                         <i className="ri-shopping-bag-line"></i>
-                        <sup className='text-sm inline-block px-1.5! text-white rounded-full 
+                        <sup className='text-sm inline-block px-1.5 text-white rounded-full 
                          bg-primary text-center'>{products.length}</sup>
                     </button>
                    </span>
@@ -92,14 +92,14 @@ const Navbar = () => {
                         user && user ? (<>
                         <img
                         onClick={handDropDownToggle}
-                         src={user?.profileImage || avatarImg} alt="" className='size-6!
+                         src={user?.profileImage || avatarImg} alt="" className='size-6
                         rounded-full cursor-pointer'/>
 
                         {
                             isDropDownOpen && (
-                            <div className='absolute right-0 mt-3! p-4! w-48!
-                            bg-white border border-gray-200! rounded-lg shadow-lg z-50!'>
-                                <ul className='font-medium space-y-4! p-2!'>
+                            <div className='absolute right-0 mt-3 p-4 w-48
+                            bg-white border border-gray-200 rounded-lg shadow-lg z-50'>
+                                <ul className='font-medium space-y-4 p-2'>
                                     {dropdownMenus.map((menu, index) => (
                                         <li key={index}>
                                             <Link

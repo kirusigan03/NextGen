@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@400;500;600;700&display=swap");
 
+@layer base {
 :root {
   --primary-color: #ed3849;
   --primary-color-dark: #d23141;
@@ -598,12 +599,28 @@ input[type="number"]::-webkit-outer-spin-button {
   border-color: #d1d5db;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   font-size: 0.875rem;
+  
 }
 
 .add-product-InputCSS:focus {
   outline: none;
   border-color: #6366f1;
   box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.add-product-InputCSS::file-selector-button {
+  margin-right: 1rem;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem;
+  background-color: #ffffff;
+  color: #374151;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.add-product-InputCSS::file-selector-button:hover {
+  background-color: #f9fafb;
 }
 
 .add-product-btn{
@@ -628,4 +645,5 @@ input[type="number"]::-webkit-outer-spin-button {
 .add-product-btn:focus{
   outline: none;
   box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
 }

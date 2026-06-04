@@ -78,7 +78,7 @@ const ShopPage = () => {
 
                 {/* right side */}
                 <div>
-                    <h3 className='text-xl font-medium mb-4!'>
+                    <h3 className='text-xl font-medium mb-4'>
                       Showing {startProduct} to {endProduct} of {totalProducts}  Products]]][[[]]]
                       </h3>
                     <ProductCards products={products} />
@@ -88,15 +88,15 @@ const ShopPage = () => {
                          <button
                          disabled={currentPage === 1}
                          onClick={() => handlePageChange(currentPage - 1)}
-                          className='px-4! py-2! bg-gray-300 text-gray-700 rounded-md mr-2!'>Previous</button>
+                          className='px-4 py-2 bg-gray-300 text-gray-700 rounded-md mr-2'>Previous</button>
 
                              {
                               [...Array(totalPages)].map((_, index) => (
                                 <button key={index} 
                                 onClick={() => handlePageChange(index + 1)}
-                                className={`px-4! py-2! ${currentPage === index + 1 ? 
+                                className={`px-4 py-2 ${currentPage === index + 1 ? 
                                 'bg-blue-500 text-white' : 'bg-gray-300 text-gray-700'} 
-                                rounded-md mx-1!`}>
+                                rounded-md mx-1`}>
                                   {index + 1}
                                 </button>
                               ))
@@ -105,7 +105,7 @@ const ShopPage = () => {
                          <button 
                          disabled={currentPage === totalPages}
                          onClick={() => handlePageChange(currentPage + 1)}
-                         className='px-4! py-2! bg-gray-300 text-gray-700 rounded-md ml-2!'>Next</button>
+                         className='px-4 py-2 bg-gray-300 text-gray-700 rounded-md ml-2'>Next</button>
                     </div>
                     
                 </div>

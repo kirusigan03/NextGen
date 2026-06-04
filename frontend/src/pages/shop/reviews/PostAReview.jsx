@@ -29,7 +29,7 @@ const PostAReview = ({ isModalOpen, handleClose }) => {
     }
     try {
       const response = await postReview(newComment).unwrap();
-      alert("Comment posted successfully!")
+      alert("Comment posted successfully")
       setComment('');
       setRating(0);
       refetch();
@@ -43,11 +43,11 @@ const PostAReview = ({ isModalOpen, handleClose }) => {
   }
 
   return (
-    <div className={`fixed inset-0 bg-black/90 flex items-center justify-center z-40! px-2! ${isModalOpen ? 'block' : 'hidden'}`}>
-      <div className='bg-white p-6! rounded-md shadow-g w-96! z-50!'>
-        <h2 className='text-g font-medium mb-4!'>Post A Review</h2>
+    <div className={`fixed inset-0 bg-black/90 flex items-center justify-center z-40 px-2 ${isModalOpen ? 'block' : 'hidden'}`}>
+      <div className='bg-white p-6 rounded-md shadow-g w-96 z-50'>
+        <h2 className='text-g font-medium mb-4'>Post A Review</h2>
 
-        <div className='flex items-center mb-4!'>
+        <div className='flex items-center mb-4'>
           {
             [1, 2, 3, 4, 5].map((star) => (
               <span
@@ -65,15 +65,15 @@ const PostAReview = ({ isModalOpen, handleClose }) => {
           value={comment}
           onChange={(e) => setComment(e.target.value)}
           rows="4"
-          className='w-full border border-gray-300 rounded-md p-2! mb-4! foucus:outline-none'
+          className='w-full border border-gray-300 rounded-md p-2 mb-4 foucus:outline-none'
         ></textarea>
-        <div className='flex justify-end gap-2!'>
+        <div className='flex justify-end gap-2'>
           <button
             onClick={handleClose}
-            className='px-4! py-2! bg-gray-300 rounded-md'>Cancel</button>
+            className='px-4 py-2 bg-gray-300 rounded-md'>Cancel</button>
           <button
             onClick={handleSubmit}
-            className='px-4! py-2! bg-primary text-white rounded-md'>Submit</button>
+            className='px-4 py-2 bg-primary text-white rounded-md'>Submit</button>
         </div>
       </div>
     </div>

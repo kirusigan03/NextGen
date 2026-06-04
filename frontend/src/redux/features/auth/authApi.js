@@ -32,7 +32,7 @@ const authApi = createApi({
         getUser: builder.query({
             query: () => ({
                 url: "/users",
-                method: "POST",
+                method: "GET",
             }),
             refetchOnMount: true,
             invalidatesTags: ["User"],
@@ -64,6 +64,6 @@ const authApi = createApi({
 })
  
 export const {useRegisterUserMutation, useLoginUserMutation, useLogoutUserMutation,
-    useGetUserQuery, useDeleteUserMutation, useUpdateUserRoleMutation, useEditprofileMutation
+    useGetUserQuery, useDeleteUserMutation, useUpdateUserRoleMutation, useEditProfileMutation
 } = authApi;
 export default authApi;

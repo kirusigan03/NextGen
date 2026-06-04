@@ -17,7 +17,7 @@ const TrendingProducts = () => {
         Trending Women's Fashion Products. </p>
 
         {/* products card*/}
-        <div className='mt-12!'>
+        <div className='mt-12'>
             <ProductCards products={products.slice(0, visibleProducts)} />
         </div>  
 

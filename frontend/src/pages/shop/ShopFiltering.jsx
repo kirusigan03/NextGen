@@ -2,11 +2,11 @@ import React from 'react'
 
 const ShopFiltering = ({ filters, filtersState, setFiltersState, clearFilters }) => {
   return (
-    <div className='space-y-5! shrink-0'>
+    <div className='space-y-5 shrink-0'>
       <h3>Filters</h3>
 
          {/* category */}
-      <div className='flex flex-col space-y-2!'>
+      <div className='flex flex-col space-y-2'>
         <h4 className='font-medium text-lg'>Category</h4>
         <hr/>
         {
@@ -22,7 +22,7 @@ const ShopFiltering = ({ filters, filtersState, setFiltersState, clearFilters })
       </div>
 
         {/* color */}
-       <div className='flex flex-col space-y-2!'>
+       <div className='flex flex-col space-y-2'>
         <h4 className='font-medium text-lg'>Color</h4>
         <hr/>
         {
@@ -38,7 +38,7 @@ const ShopFiltering = ({ filters, filtersState, setFiltersState, clearFilters })
       </div>
 
         {/* price range */}
-        <div className='flex flex-col space-y-2!'>
+        <div className='flex flex-col space-y-2'>
         <h4 className='font-medium text-lg'>Price Range</h4>
         <hr/>
         {
@@ -54,7 +54,7 @@ const ShopFiltering = ({ filters, filtersState, setFiltersState, clearFilters })
       </div>
 
        {/* clear filters button */}
-       <button onClick={clearFilters} className='bg-primary py-1! px-4! text-white rounded'>Clear All Filters</button>
+       <button onClick={clearFilters} className='bg-primary py-1 px-4 text-white rounded'>Clear All Filters</button>
     </div>
   )
 }

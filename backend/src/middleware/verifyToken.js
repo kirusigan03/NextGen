@@ -14,11 +14,11 @@ const verifyToken = (req, res, next) => {
             return res.status(401).send({message: 'Invalid token or not valid'})
         }
         req.userId = decoded.userId;
-        req.rol = decoded.role;
+        req.role = decoded.role;
         next();
     } catch (error) {
             console.error('Error while verifying token', error);
-            res.ststus(401).send({message: 'Error while verifying token'})
+            res.status(401).send({message: 'Error while verifying token'})
     }
 }
 

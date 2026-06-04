@@ -1,32 +1,32 @@
-const {Schema, model} = require('mongoose');
+const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
 const userShecma = new Schema({
-    username: {type: String, require: true, unique:true},
-    email: {type: String, require: true, unique:true},
-    password: {type: String, require: true},
+    username: { type: String, require: true, unique: true },
+    email: { type: String, require: true, unique: true },
+    password: { type: String, require: true },
     role: {
         type: String, default: 'user'
     },
     profileImage: String,
-    bio: {type: String, maxlength: 200},
+    bio: { type: String, maxlength: 200 },
     profession: String,
-    createAt:{
+    createAt: {
         type: Date,
-        default:Date.now
+        default: Date.now
     }
 
-    
+
 });
 
 //hashing passwords
 userShecma.pre('save', async function(){
-    const user = this;
-    if(!user.isModified('password')) ;
+    const user =  this;
+    if(!user.isModified('password')) return;
     const hashedPassword = await bcrypt.hash(user.password, 10);
     user.password = hashedPassword;
-    // next();
 })
+
 
 //match passwords
 userShecma.methods.comparePassword = function (cadidatePassword) {

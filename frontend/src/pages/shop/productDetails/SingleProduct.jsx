@@ -44,13 +44,13 @@ const SingleCards = () => {
             </div>
 
             <div className='md:w-1/2 w-full'>
-                <h3 className='text-2xl font-semibold mb-4!'>{singleProduct?.name}</h3>
-                <p className='text-xl text-primary mb-4! space-x-1'>${singleProduct?.price}
-                  {singleProduct?.oldPrice && <s className='ml-1!'>${singleProduct?.oldPrice}</s>} </p>
-                <p className='text-gray-400 mb-4!'>{singleProduct?.description}</p>
+                <h3 className='text-2xl font-semibold mb-4'>{singleProduct?.name}</h3>
+                <p className='text-xl text-primary mb-4 space-x-1'>${singleProduct?.price}
+                  {singleProduct?.oldPrice && <s className='ml-1'>${singleProduct?.oldPrice}</s>} </p>
+                <p className='text-gray-400 mb-4'>{singleProduct?.description}</p>
 
                 {/* additional product info */}
-                <div className='flex flex-col space-y-2!'>
+                <div className='flex flex-col space-y-2'>
                   <p><strong>Category:</strong> {singleProduct?.category}</p>
                   <p><strong>Color:</strong> {singleProduct?.color}</p>
                   <div className='flex gap-1 items-center'>
@@ -65,7 +65,7 @@ const SingleCards = () => {
                   e.stopPropagation();
                   handleAddToCart(singleProduct)
                 }}
-                 className='mt-6! px-6! py-3! bg-primary text-white rounded-md'>
+                 className='mt-6 px-6 py-3 bg-primary text-white rounded-md'>
                   Add to cart
                 </button>
             </div>
@@ -74,7 +74,7 @@ const SingleCards = () => {
        
        {/* display Reviews */}
 
-      <section className='section__container mt-8!'>
+      <section className='section__container mt-8'>
           <ReviewsCard productReviews ={productReviews}/>
       </section>
     </>

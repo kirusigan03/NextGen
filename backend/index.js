@@ -44,7 +44,7 @@ async function main() {
   await mongoose.connect(process.env.DB_URL);
 
   app.get('/', (req, res) => {
-    res.send('Lebaba E-commerce Server is running....!')
+    res.send('NextGen E-commerce Server is running....!')
   })
 }
 

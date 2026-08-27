@@ -70,7 +70,7 @@ const Navbar = () => {
 
             {/* logo */} 
             <div className='nav__logo'>
-                <Link to="/">Lebaba<span>.</span></Link>
+                <Link to="/">NextGen<span>.</span></Link>
             </div>
 
                 {/* nav icons */}
